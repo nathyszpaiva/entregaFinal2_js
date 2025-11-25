@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    padding-bottom: 50px; 
+}
+
+h1 {
+    color: #cc0000; /* Vermelho Pokémon */
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#pokemon-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    background-color: #3b4cca; /* Azul Pokémon */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #2a3c9e;
+}
+
+/* Estilo Base para Todos os Cards (Lista e Detalhes) */
+.pokemon-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 150px;
+    transition: all 0.4s ease;
+    margin-bottom: 10px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #ffffff; /* Garante fundo branco para o card de detalhes */
+}
+
+/* Estilo Específico para Cards da Lista (Estado Padrão) */
+.pokemon-card.list-item {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.pokemon-card.list-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Garante que a imagem no MODO LISTA tenha um tamanho razoável e centralizado */
+.pokemon-card.list-item img {
+    max-width: 80px; 
+    height: auto;
+    margin: 5px 0;
+    display: block;
+}
+
+.pokemon-card h3 {
+    text-transform: capitalize;
+    margin-top: 5px;
+    color: #3b4cca;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILO DO CARD DE DETALHES ATIVO (.active-details) */
+/* ---------------------------------------------------- */
+
+/* Card quando está no modo de detalhes */
+.pokemon-card.active-details {
+    text-align: left;
+    height: auto !important;
+    min-height: 250px;
+    transform: none; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    border: 3px solid #3b4cca; 
+    color: #333; /* Força o texto escuro, já que o fundo é branco */
+}
+
+.pokemon-card.active-details h2 {
+    text-transform: capitalize;
+    margin-top: 0;
+    color: #3b4cca;
+}
+
+.pokemon-card.active-details .detail-img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.pokemon-card.active-details p {
+    margin: 5px 0;
+}
+
+
+/* REMOVIDO: Classes CSS para Legibilidade (.light-text, .dark-text) */
+
+
+/* Estilo do botão de fechar/limpar (usado apenas na busca manual) */
+.close-details-button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #cc0000; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.close-details-button:hover {
+    background-color: #a30000;
+}
+
+/* ======================================= */
+/* ======= ESTILO CORRIGIDO DO HISTÓRICO ======= */
+/* ======================================= */
+
+h2{
+    color: #005fcc; 
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Remove marcadores de tópico e padding/margin padrão da lista */
+#history-list {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+/* Garante que cada item fique em sua própria linha (vertical) */
+#history-list li {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Estilo dos links do histórico */
+#history-list a {
+    text-decoration: none;
+    color: #3e9cdf;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+#history-list a:hover {
+    color: #005fcc;
+}
+/* Seção de Lista e Botão Carregar Mais */
+
+#pokemon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#load-more-button {
+    padding: 10px 15px;
+    background-color: #3b4cca;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s;
+    /* AJUSTE: Espaçamento abaixo do botão */
+    margin-bottom: 20px; 
+}
+
+#load-more-button:hover {
+    background-color: #2a3c9e; 
+}
