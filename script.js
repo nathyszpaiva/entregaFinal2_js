@@ -45,8 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (pokemonInfoDiv.classList.contains('active-details')) {
              // Limpa o card de busca manual
              pokemonInfoDiv.classList.remove('active-details');
-             // REMOVIDO: Limpeza de classes de cor e background-color
-             pokemonInfoDiv.innerHTML = ''; // Não coloca instrução inicial
+             pokemonInfoDiv.innerHTML = ''; 
         }
     }
 
@@ -208,3 +207,4 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchPokemonList(offset);
 
 });
+
