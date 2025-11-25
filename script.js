@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // REMOVIDO: Objeto/mapa em JavaScript para mapear tipos a cores e classes de legibilidade (pokemonTypes)
+    
 
     const searchHistory = [];
     const historyList = document.getElementById('history-list');
@@ -23,9 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /**
-     * Limpa o estilo e o estado do card de detalhes anterior.
-     */
     function resetActiveCard() {
         if (activeDetailCard && activeDetailCard.pokemonData) {
             // Reverte o estilo do card
@@ -34,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
             activeDetailCard.style.textAlign = 'center';
             activeDetailCard.style.height = 'auto';
 
-            // Reverte o conteúdo do card para o estado de lista
+            
             const data = activeDetailCard.pokemonData;
             const pokeId = data.id;
             activeDetailCard.innerHTML = `
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeId}.png" alt="${data.name}">
                 <h3>${data.name}</h3>
             `;
-            // Adiciona o listener de volta
+            
             addCardClickListener(activeDetailCard, data.name, pokeId);
             
             activeDetailCard = null; // Limpa o estado
@@ -97,11 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 2. Estilos Dinâmicos
-        // REMOVIDO: Lógica para obter primaryType e typeInfo
         
         cardElement.classList.add('active-details');
-        // REMOVIDO: cardElement.classList.add(typeInfo.textClass);
-        // REMOVIDO: cardElement.style.backgroundColor = typeInfo.color;
         cardElement.style.textAlign = 'left';
         cardElement.style.height = 'auto';
 
@@ -212,4 +206,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carregar a lista inicial de Pokémon
     fetchPokemonList(offset);
+
 });
