@@ -94,9 +94,6 @@ h1 {
     color: #3b4cca;
 }
 
-/* ---------------------------------------------------- */
-/* ESTILO DO CARD DE DETALHES ATIVO (.active-details) */
-/* ---------------------------------------------------- */
 
 /* Card quando está no modo de detalhes */
 .pokemon-card.active-details {
@@ -127,8 +124,6 @@ h1 {
 }
 
 
-/* REMOVIDO: Classes CSS para Legibilidade (.light-text, .dark-text) */
-
 
 /* Estilo do botão de fechar/limpar (usado apenas na busca manual) */
 .close-details-button {
@@ -149,9 +144,6 @@ h1 {
     background-color: #a30000;
 }
 
-/* ======================================= */
-/* ======= ESTILO CORRIGIDO DO HISTÓRICO ======= */
-/* ======================================= */
 
 h2{
     color: #005fcc; 
@@ -167,7 +159,7 @@ h2{
     text-align: center;
 }
 
-/* Garante que cada item fique em sua própria linha (vertical) */
+/* Garante que cada item fique vertical */
 #history-list li {
     display: block;
     margin: 5px 0;
@@ -210,4 +202,5 @@ h2{
 
 #load-more-button:hover {
     background-color: #2a3c9e; 
+
 }
